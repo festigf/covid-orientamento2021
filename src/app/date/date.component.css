@@ -1,0 +1,109 @@
+.sfondo {
+    background-color: coral;
+}
+
+.form1 {
+    color: blue;
+    font-family: cursive;
+}
+
+.form2 {
+    color: red;
+    font-family: cursive;
+}
+
+.form3 {
+    color: green;
+    font-family: cursive;
+}
+
+.form4 {
+    color: darkblue;
+    font-family: cursive;
+}
+
+.form5 {
+    color: darkred;
+    font-family: cursive;
+}
+
+
+/* Small devices (landscape phones, 354px and up) */
+@media (min-width: 354px) { 
+    #logo {
+        font-family: 'Open Sans', sans-serif;
+        color: #555;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 50px;
+        font-weight: 400;
+        letter-spacing: -3px;
+        line-height: 1;
+        text-shadow: #EDEDED 3px 2px 0;
+        position: relative;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    #logo {
+        font-family: 'Open Sans', sans-serif;
+        color: #555;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 75px;
+        font-weight: 500;
+        letter-spacing: -3px;
+        line-height: 1;
+        text-shadow: #EDEDED 3px 2px 0;
+        position: relative;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    #logo {
+        font-family: 'Open Sans', sans-serif;
+        color: #555;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 100px;
+        font-weight: 600;
+        letter-spacing: -3px;
+        line-height: 1;
+        text-shadow: #EDEDED 3px 2px 0;
+        position: relative;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    #logo {
+        font-family: 'Open Sans', sans-serif;
+        color: #555;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 125;
+        font-weight: 700;
+        letter-spacing: -3px;
+        line-height: 1;
+        text-shadow: #EDEDED 3px 2px 0;
+        position: relative;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    #logo {
+        font-family: 'Open Sans', sans-serif;
+        color: #555;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 150px;
+        font-weight: 800;
+        letter-spacing: -3px;
+        line-height: 1;
+        text-shadow: #EDEDED 3px 2px 0;
+        position: relative;
+    }
+}

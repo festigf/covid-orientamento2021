@@ -1,0 +1,59 @@
+<div class="jumbotron jumbotron-fluid sfondo">
+    <h1 class="display-4">Osserva i dati di qualsiasi stato</h1>
+</div>
+<div class="container">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Scrivi il nome di uno Stato (in inglese) iniziando con la lettera maiuscola " #query>
+        <div class="input-group-append">
+            <button class="btn btn-outline-success" type="button" (click)="cerca()">Cerca</button>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="container">
+    <div class="alert alert-danger" role="alert" *ngIf="error">
+        Nessuno Stato trovato! 
+    </div>
+</div>
+<div class="container" *ngIf="stato">
+    <h1 class="text-center title" *ngFor="let country of stato">{{country.country_text}}</h1>
+    <br>
+    <div class="row">
+        <div class="col text-center" *ngFor="let country of stato">
+            <h1 class="text-center form1">{{country.totalCases_text}}</h1>
+            <h5>Casi totali</h5>
+        </div>
+        <div class="col text-center form2" *ngFor="let country of stato">
+            <h1 class="text-center">{{country.totalDeaths_text}}</h1>
+            <h5>Decessi totali</h5>
+        </div>
+        <div class="col text-center form3" *ngFor="let country of stato">
+            <h1 class="text-center">{{country.totalRecovered_text}}</h1>
+            <h5>Guariti</h5>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col text-center form1" *ngFor="let country of stato">
+            <h1 class="text-center">{{country.newCases_text}}</h1>
+            <h5>Nuovi casi</h5>
+        </div>
+        <div class="col text-center form2" *ngFor="let country of stato">
+            <h1 class="text-center">{{country.newDeaths_text}}</h1>
+            <h5>Nuovi decessi</h5>
+        </div>
+        <div class="col text-center form3" *ngFor="let country of stato">
+            <h1 class="text-center">{{country.activeCases_text}}</h1>
+            <h5>Casi positivi</h5>
+        </div>
+    </div>
+    <br>
+    <div class="row" *ngFor="let country of stato">
+        <div class="col"></div>
+        <div class="col text-center">
+            <h1 class="text-center data">{{country.lastUpdate}}</h1>
+        </div>
+        <div class="col"></div>     
+    </div>
+</div>
+<br>

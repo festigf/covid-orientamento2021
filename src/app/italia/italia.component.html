@@ -1,0 +1,82 @@
+<!-- Jumbotron -->
+<div class="jumbotron jumbotron-fluid sfondo">
+    <div class="container">
+        <h1 class="text-center display-4">Situazione in Italia</h1>
+        <br>
+        <div class="row" style="font-style: italic;">
+            <div class="col-6">
+                <p>Uno dei primi paesi colpiti pensantemente dal virus.
+                    La Lombardia e il Veneto erano i più grandi focolai nel periodo del lockdown.</p>
+            </div>
+            <div class="col-6">
+                <p>Sii il cambiamento che vuoi vedere avvenire nel mondo. (Mahatma Gandhi)</p>
+            </div>
+        </div>
+        <div class="row">
+            <img class="img-fluid rounded mx-auto d-block border border-dark img" src="../assets/colosseo.jpg"
+                alt="immagine">
+        </div>
+    </div>
+</div>
+<!-- Grafici component italia -->
+<div class="p-3 bg-light text-dark">
+    <div class="container">
+        <h1 class="text-center title">Dati totali dall'inizio della pandemia</h1>
+        <canvas id="myChart"></canvas>
+    </div>
+    <br>
+    <div class="container">
+        <h1 class="text-center title">Dati recenti in Italia sul COVID</h1>
+        <canvas id="myChart2"></canvas>
+    </div>
+</div>
+<!-- Tabella con dati relativi all'italia -->
+<div class="p-3 bg-dark text-white">
+    <div class="container" *ngFor="let italia of italy">
+        <h1 class="text-center title2">Dati in Italia</h1>
+        <p class="text-center">Ultimo aggiornamento</p>
+        <p class="text-center">{{italia.lastUpdate}}</p>
+        <div class="row testo1">
+            <div class="col-6 text-center">
+                <h1>{{italia.totalConfirmed}}</h1>
+                <h4>Casi Totali</h4> 
+            </div>
+            <div class="col-6 text-center">
+                <h1>{{italia.dailyConfirmed}}</h1>
+                <h4>Nuovi Casi</h4> 
+            </div>
+        </div>
+        <div class="row testo2">
+            <div class="col-6 text-center">
+                <h1>{{italia.totalDeaths}}</h1>
+                <h4>Decessi Totali</h4> 
+            </div>
+            <div class="col-6 text-center">
+                <h1>{{italia.dailyDeaths}}</h1>
+                <h4>Nuovi Decessi</h4> 
+            </div>
+        </div>
+        <div class="row testo3">
+            <div class="col-6 text-center">
+                <h1>{{italia.totalRecovered}}</h1>
+                <h4>Guariti Totali</h4> 
+            </div>
+            <div class="col-6 text-center">
+                <h1>{{italia.activeCases}}</h1>
+                <h4>Positivi totali</h4> 
+            </div>
+        </div>
+        <div class="row testo4">
+            <div class="col-6 text-center">
+                <h1>{{italia.totalConfirmedPerMillionPopulation}}</h1>
+                <h4>Casi totali ogni milione di persone</h4> 
+            </div>
+            <div class="col-6 text-center">
+                <h1>{{italia.totalDeathsPerMillionPopulation}}</h1>
+                <h4>Morti totali ogni milione di persone</h4> 
+            </div>
+        </div>
+        <h1 class="text-center testo2">{{italia.totalCritical}}</h1>
+        <h4 class="text-center testo2">Casi critici</h4>    
+    </div>
+</div>

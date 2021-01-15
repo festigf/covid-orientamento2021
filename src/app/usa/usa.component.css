@@ -1,0 +1,27 @@
+.img {
+    height: 350px;
+    width: 500px;
+}
+
+.sfondo {
+    background-color: coral;
+    margin-bottom: 0px;
+}
+
+#morti {
+    color: orangered;
+}
+
+#casi{
+    color: cornflowerblue;
+}
+
+.box {
+    margin-bottom: 0px;
+}
+
+.title {
+    padding: 0 0 6px 10px;
+    border-left: 10px solid #000000;
+    border-bottom: 2px solid #000000; 
+}

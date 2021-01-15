@@ -1,0 +1,73 @@
+<div class="jumbotron sfondo">
+    <h1 class="display-4">Osserva i dati globali in uno specifico giorno</h1>
+</div>
+<div class="container">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="YYYY-MM-GG" #date>
+        <div class="input-group-append">
+            <button class="btn btn-outline-success" type="button" (click)="cerca()">Cerca</button>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="container" *ngIf="error">
+    <div class="alert alert-danger" role="alert">
+        Data scritta in modo errato o non trovata!
+    </div>
+</div>
+<div class="container" *ngIf="casi">
+    <h1 class="text-center" id="logo" *ngFor="let data of casi">{{data.date}}</h1>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col text-center form1" *ngFor="let data of casi">
+            <h1 class="text-center">+{{data.confirmedDiff}}</h1>
+            <h5>Confermati</h5>
+        </div>
+        <div class="col text-center form1" *ngFor="let data of casi">
+            <h1 class="text-center">{{data.confirmed}}</h1>
+            <h5>Confermati totali</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-center form2" *ngFor="let data of casi">
+            <h1 class="text-center">+{{data.deathsDiff}}</h1>
+            <h5>Decessi</h5>
+        </div>
+        <div class="col text-center form2" *ngFor="let data of casi">
+            <h1 class="text-center">{{data.deaths}}</h1>
+            <h5>Decessi totali</h5>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col text-center form3" *ngFor="let data of casi">
+            <h1 class="text-center">+{{data.recoveredDiff}}</h1>
+            <h5>Guariti</h5>
+        </div>
+        <div class="col text-center form3" *ngFor="let data of casi">
+            <h1 class="text-center">{{data.recovered}}</h1>
+            <h5>Guariti totali</h5>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col text-center form4" *ngFor="let data of casi">
+            <h1 class="text-center">+{{data.activeDiff}}</h1>
+            <h5>Positivi</h5>
+        </div>
+        <div class="col text-center form4" *ngFor="let data of casi">
+            <h1 class="text-center">{{data.active}}</h1>
+            <h5>Positivi totali</h5>
+        </div>
+    </div>
+    <br>
+    <div class="row" *ngFor="let data of casi">
+        <div class="col"></div>
+        <div class="col text-center form5" *ngFor="let data of casi">
+            <h1 class="text-center">{{data.fatalityRate}}%</h1>
+            <h5>Tasso di mortalità</h5>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>

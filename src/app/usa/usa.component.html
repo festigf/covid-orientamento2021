@@ -1,0 +1,55 @@
+<!-- Jumbotron -->
+<div class="jumbotron jumbotron-fluid sfondo">
+    <div class="container">
+        <h1 class="text-center display-4">Situazione negli Stati Uniti d'America</h1>
+        <br>
+        <div class="row" style="font-style: italic;">
+            <div class="col-6">
+                <p>Uno dei periodi più bui della storia americana.</p>
+            </div>
+            <div class="col-6">
+                <p>Il paese pipù colpito al mondo, sia per numero di morti che per persone contagiate.</p>
+            </div>
+        </div>
+        <div class="row">
+            <img class="rounded img-fluid mx-auto d-block border border-dark img" src="../assets/libertà.jpg"
+                alt="immagine jumbotron">
+        </div>
+    </div>
+</div>
+<!-- Parte centrale USA component-->
+<div class="p-3 bg-light text-black box">
+    <!-- Grafico Casi e Decessi USA-->
+    <div class="container">
+        <h1 class="text-center title">Tutti i dati sugli Stati Uniti d'America</h1>
+        <h4 class="text-center" style="color: blue;">Casi</h4>
+        <div class="row">
+            <canvas id="myChart"></canvas>
+        </div>
+        <h4 class="text-center" style="color: red;">Decessi</h4>
+        <div class="row">            
+            <canvas id="death"></canvas>
+        </div>
+    </div>
+</div>
+<div class="p-3 mb-2 bg-dark text-white">
+    <!-- Tabella casi e decessi USA-->
+    <div class="container table-responsive">
+        <table class="table text-white">
+            <thead>
+                <tr>
+                    <th scope="col">State</th>
+                    <th scope="col">Casi</th>
+                    <th scope="col">Morti</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let Usa of usa">
+                    <th scope="row">{{Usa.state}}</th>
+                    <td id="casi">{{Usa.case}}</td>
+                    <td id="morti">{{Usa.death}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

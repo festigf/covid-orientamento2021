@@ -1,0 +1,56 @@
+<!-- Jumbotron -->
+<div class="jumbotron jumbotron-fluid sfondo">
+    <h1 class="display-4">Situazione nel mondo, continente per continente</h1>
+</div>
+<div class="p-3 bg-light text-dark">
+    <!-- Grafici sui continenti -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <canvas id="graficoDati"></canvas>
+            </div>
+            <div class="col">
+                <canvas id="graficoDati3"></canvas>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <canvas id="graficoDati2"></canvas>
+    </div>
+    <br>
+    <!-- Dati sui continenti -->
+    <div class="container">
+        <h1 class="text-center title">Continenti</h1>
+        <hr>
+        <ul class="list-unstyled" *ngFor="let world of mondo">
+            <li class="media">
+              <img src="../assets/world2.jpg" class="mr-3 img" alt="immagine">
+              <div class="media-body">
+                <h2 class="mt-0 mb-1">{{world.continent}}</h2>
+                <div class="row">
+                    <div class="col">
+                        <p><b>Popolazione:</b> {{world.population}}</p>
+                        <p><b>Casi:</b> {{world.cases}}</p>
+                        <p><b>Decessi:</b> {{world.deaths}}</p>
+                        <p><b>Guariti:</b> {{world.recovered}}</p>
+                        <p><b>Critici:</b> {{world.critical}}</p>
+                    </div>
+                    <div class="col">
+                        <p><b>Test:</b> {{world.tests}}</p>
+                        <p><b>Nuovi casi:</b> {{world.todayCases}}</p>
+                        <p><b>Nuovi decessi:</b> {{world.todayDeaths}}</p>
+                        <p><b>Nuovi Guariti:</b> {{world.tadayRecovered}}</p>
+                        <p><b>Positivi:</b> {{world.active}}</p>
+                    </div>
+                </div>
+                <p><b>Test ogni milione di persone:</b> {{world.testsPerOneMillion}}</p>
+                <p><b>Casi ogni milione di persone:</b> {{world.casesPerOneMillion}}</p>
+                <p><b>Decessi ogni milione di persone:</b> {{world.deathsPerOneMillion}}</p>
+                <p><b>Guariti ogni milione di persone:</b> {{world.recoveredPerOneMillion}}</p>             
+              </div>
+            </li>
+            <hr>
+        </ul>
+    </div>
+</div>
